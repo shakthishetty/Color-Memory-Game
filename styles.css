@@ -1,0 +1,127 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 5%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: auto;
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Visual feedback for button click */
+.btn:active {
+  transform: scale(0.9); /* Visual feedback on click */
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+/* Media Queries */
+
+/* Laptops and large screens */
+@media (max-width: 1024px) {
+  #level-title {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    width: 70%;
+  }
+
+  .btn {
+    height: 150px;
+    width: 150px;
+    margin: 15px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  #level-title {
+    font-size: 2rem;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .btn {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  #level-title {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+  }
+  
+  .btn:active {
+    transform: scale(0.95); /* Adjusted feedback for smaller screens */
+  }
+}
